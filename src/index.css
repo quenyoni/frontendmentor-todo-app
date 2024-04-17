@@ -1,0 +1,467 @@
+/* :root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
+
+/* 
+ */
+
+/* 
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Bright Blue: hsl(220, 98%, 61%)
+- Check Background: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%)
+
+### Neutral
+
+### Light Theme
+
+- Very Light Gray: hsl(0, 0%, 98%)
+- Very Light Grayish Blue: hsl(236, 33%, 92%)
+- Light Grayish Blue: hsl(233, 11%, 84%)
+- Dark Grayish Blue: hsl(236, 9%, 61%)
+- Very Dark Grayish Blue: hsl(235, 19%, 35%)
+
+### Dark Theme
+
+- Very Dark Blue: hsl(235, 21%, 11%)
+- Very Dark Desaturated Blue: hsl(235, 24%, 19%)
+- Light Grayish Blue: hsl(234, 39%, 85%)
+- Light Grayish Blue (hover): hsl(236, 33%, 92%)
+- Dark Grayish Blue: hsl(234, 11%, 52%)
+- Very Dark Grayish Blue: hsl(233, 14%, 35%)
+- Very Dark Grayish Blue: hsl(237, 14%, 26%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+- Family: [Josefin Sans](https://fonts.google.com/specimen/Josefin+Sans)
+- Weights: 400, 700 */
+
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap");
+
+:root {
+	--body_bg_main: hsl(235, 21%, 11%);
+	--main_font: "Josefin Sans", sans-serif;
+}
+
+* {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: var(--main_font);
+}
+body {
+	font-size: 18px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+main {
+	width: 100vw;
+	position: relative;
+	background: hsl(235, 21%, 11%);
+	color: #fff;
+	height: 100vh;
+	z-index: 500;
+	/* display: grid; */
+	/* place-content: center;
+} */
+}
+
+.upper__container {
+	font-size: 3rem;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+section {
+	top: 50%;
+	transform: translateY(-50%);
+	margin: 0 2rem;
+	padding: 2rem;
+	/* padding: 0 2rem; */
+	/* transform: translate(0, 50%); */
+	/* background: hsl(235, 24%, 19%); */
+	background-color: transparent;
+	z-index: 500;
+	position: relative;
+
+	margin-inline: auto;
+	max-width: 768px;
+	z-index: 1000;
+	display: grid;
+	box-shadow: 0 1px 1px rgba(18, 21, 26, 0.075);
+	border-radius: 0.51rem;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	row-gap: 2rem;
+	/* gap: 2rem; */
+	/* grid-template-rows: 1fr 5fr; */
+}
+
+section.light {
+	background: #fff;
+}
+main.light {
+	background: hsl(0, 0%, 98%);
+	color: #000;
+}
+
+.form {
+	padding: 1rem 2rem;
+	overflow: hidden;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px rgba(174, 185, 203, 0.075);
+	background: hsl(235, 24%, 19%) !important;
+}
+
+.form label {
+	width: 100%;
+}
+
+.form input {
+	font-size: inherit;
+	padding: 0;
+	outline: none;
+	border: none;
+	background-color: inherit;
+	color: inherit;
+
+	width: 100%;
+}
+
+button {
+	border: none;
+	background: transparent;
+	/* height: 1.75rem;
+	width: 1.75rem; */
+	cursor: pointer;
+	color: inherit;
+}
+.button--edit {
+	color: inherit;
+	height: 1.5em;
+	width: 1.5em;
+}
+
+.button--submit {
+	position: relative;
+	content: "\21E7";
+	width: 2.5rem;
+	height: 2.5rem;
+	opacity: 1;
+	border-radius: 50%;
+
+	display: grid;
+	place-content: center;
+}
+
+.button--submit::before {
+	left: 0;
+	top: 0;
+	display: grid;
+	place-content: center;
+	position: absolute;
+	content: "\279C";
+	display: block;
+	height: 2.5rem;
+	width: 2.5rem;
+	color: #fff;
+	opacity: 0.75;
+	border-radius: 50%;
+	transition: all 150ms ease-in;
+	border: 1px solid #fff;
+}
+
+.button--submit:hover::before {
+	background: linear-gradient(
+		45deg,
+		hsl(192, 100%, 67%),
+		hsl(280, 87%, 65%)
+	);
+	color: #fff !important;
+	opacity: 1;
+}
+
+.button--submit:active::before {
+	background: linear-gradient(#44ea76, #39fad7);
+}
+
+.todo__list__container {
+	overflow: hidden;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px rgba(174, 185, 203, 0.075);
+	background: hsl(235, 24%, 19%) !important;
+	height: 50vh;
+	display: flex;
+	/* justify-content: center; */
+	flex-direction: column;
+	/* align-items: center; */
+}
+
+.todo__list__container ul {
+	flex-grow: 1;
+	overflow: auto;
+	scrollbar-width: 0;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 2px grey;
+	background: inherit;
+	border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: linear-gradient(
+		10deg,
+		hsl(192, 100%, 67%),
+		hsl(280, 87%, 65%)
+	);
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: linear-gradient(
+		45deg,
+		hsl(192, 100%, 67%),
+		hsl(280, 87%, 65%)
+	);
+}
+
+/* TODO ITEM */
+.todo__item {
+	cursor: pointer;
+	/* display: grid;
+	grid-template-columns: 5fr 1fr; */
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 1rem 2rem;
+	border-bottom: 1px solid #f4f4f4;
+}
+
+.todo__item:last-child {
+	border-bottom: 1px solid transparent;
+}
+
+.todo__item__button__group {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	opacity: 0;
+	transition: opacity 250ms ease-in;
+}
+
+.todo__item:hover .todo__item__button__group {
+	opacity: 1;
+}
+
+input[type="checkbox"] {
+	position: absolute;
+
+	opacity: 0;
+	width: 3em;
+	height: 4em;
+}
+
+input[type="checkbox"] + span {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
+
+input[type="checkbox"]:hover + span {
+	text-decoration: line-through;
+	font-style: italic;
+	color: red;
+}
+
+input[type="checkbox"] + span::before {
+	content: "";
+	width: 2em;
+	height: 2em;
+	border-radius: 50%;
+	background: transparent;
+	border: 1px solid #f4f4f4;
+}
+
+input[type="checkbox"] + span:hover::before {
+	border: 1px solid
+		linear-gradient(
+			45deg,
+			hsl(192, 100%, 67%),
+			hsl(280, 87%, 65%)
+		);
+	background: #fff;
+	opacity: 0.5;
+}
+
+input[type="checkbox"]:checked + span::before {
+	background: linear-gradient(
+		45deg,
+		hsl(192, 100%, 67%),
+		hsl(280, 87%, 65%)
+	);
+	/* content: "\2714"; */
+	content: url("/icon-check.svg");
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+input[type="checkbox"]:checked + span {
+	text-decoration: line-through;
+	font-style: italic;
+	color: hsl(234, 11%, 52%);
+}
+
+.info__bar {
+	border-top: 1px solid rgba(0, 0, 0, 0.12);
+
+	padding: 2rem;
+	background: inherit;
+	display: flex;
+	justify-content: space-between;
+}
+
+@media (prefers-color-scheme: light) {
+}
+
+body {
+	background: var(--body_bg_main);
+}
+
+.hero {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 30vh;
+	background: url("/bg-mobile-dark.jpg")
+		center/cover;
+	z-index: 10;
+	/* opacity: 0.1; */
+}
+
+.hero.light {
+	background: url("/bg-mobile-light.jpg")
+		center/cover;
+}
+
+@media (min-width: 768px) {
+	.hero {
+		background: url("/bg-desktop-dark.jpg")
+			center/cover;
+		height: 40vh;
+		transition: background 400ms ease-in;
+	}
+	section {
+		/* margin-inline: auto;
+		min-width: 768px; */
+	}
+
+	.hero.light {
+		height: 40vh;
+		background: url("/bg-desktop-light.jpg")
+			center/cover;
+	}
+}
